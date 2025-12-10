@@ -1,6 +1,19 @@
-# CLAUDE.md - AI Assistant Guide for Patient_Explorer
+# CLAUDE.md - AI Assistant Guide for HomeTeam_Navigator
 
-This document provides guidance for AI assistants (like Claude) working on the Patient_Explorer codebase.
+This document provides guidance for AI assistants (like Claude) working on the HomeTeam_Navigator codebase.
+
+## Home Team Medical Services Context
+
+**Organization**: Home Team Medical Services
+**Domain**: hometeammed.com
+**Inbound Email**: info@hometeammed.com (monitor for patient record transfer requests)
+
+### Cross-Reference Capability
+
+This deployment supports cross-referencing patients from **Green Clinic** transfers:
+- Field: `green_clinic_mrn` - Original MRN from Green Clinic
+- Enables tracking patients who transferred from Dr. Green's practice
+- Search by either Home Team MRN or Green Clinic MRN
 
 ## HIPAA Compliance for AI Services
 
@@ -41,19 +54,19 @@ See: `docs/Research_Reports/2025-11-30_Azure-Claude-HIPAA-BAA-Compatible.md`
 
 ## Project Overview
 
-**Patient_Explorer** is a HIPAA-compliant patient consent tracking and outreach tool for managing patient data during EMR transitions.
+**HomeTeam_Navigator** is a HIPAA-compliant patient tracking and outreach tool for Home Team Medical Services.
 
-- **Current Status**: Phase 0 - Consent Outreach Tool (Python CLI)
-- **Purpose**: Track patient consent for record retention during practice transition
+- **Current Status**: Phase 0 - Patient Outreach Tool (Python CLI)
+- **Purpose**: Track patients, manage outreach, and cross-reference Green Clinic transfers
 - **Platform**: Windows 11 + BitLocker, Python virtual environment
 - **Storage**: Local files + SharePoint/Azure (under HIPAA BAA)
-- **Created**: October 2025
-- **Phase 1 (Future)**: Care Plan & Chart building desktop app
+- **Created**: December 2025 (cloned from Patient_Explorer)
+- **Source**: Derived from Green Clinic's Patient_Explorer project
 
 ## Project Structure
 
 ```
-Patient_Explorer/
+HomeTeam_Navigator/
 ├── phase0/                     # Python consent outreach tool
 │   ├── __init__.py
 │   ├── __main__.py            # Entry point for `python -m phase0`
@@ -312,16 +325,19 @@ PATIENT_EXCEL_PATH=data/patients.xlsx
 LOG_FILE=logs/phase0.log
 ```
 
-## Multi-Tenant Context
+## Tenant Context
 
-### Green Clinic (Current Focus)
-- **Tenant**: southviewteam.com, greenclinicteam.com
+### Home Team Medical Services (This Deployment)
+- **Tenant**: hometeammed.com
 - **BAA**: HIPAA BAA with Microsoft in place
 - **Admin**: Robert Green, MD
+- **Inbound Email**: info@hometeammed.com
 
-### Home Team Medical Services (Future)
-- **Tenant**: hometeammed.com
-- **Separate deployment** after Green Clinic validation
+### Cross-Reference: Green Clinic
+- **Related Tenant**: southviewteam.com
+- **Related Project**: Patient_Explorer
+- **Purpose**: Track patients transferring from Dr. Green's Green Clinic practice
+- **Cross-Reference Field**: `green_clinic_mrn`
 
 ## Workflow
 
@@ -692,11 +708,13 @@ Consult with legal counsel (Susan Doughton referenced in project history) for sp
 
 ## Contact / Ownership
 
-- **Organization**: Green Clinic / Home Team Medical Services
+- **Organization**: Home Team Medical Services
 - **Admin/Owner**: Robert Green, MD
-- **Microsoft Tenants**: southviewteam.com, hometeammed.com
+- **Microsoft Tenant**: hometeammed.com
+- **Inbound Email**: info@hometeammed.com
 - **Development Environment**: VS Code + Claude Code
+- **Related Project**: Patient_Explorer (Green Clinic)
 
 ---
 
-*Last Updated: December 8, 2025 (v2.9 - Added Azure Workspace Sync for PHI data portability)*
+*Last Updated: December 10, 2025 (v1.0 - Initial HomeTeam_Navigator deployment)*
