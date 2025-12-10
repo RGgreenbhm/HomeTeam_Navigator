@@ -2,17 +2,17 @@
 
 ## Claude Code Access
 
-**IMPORTANT**: Grant Claude Code access to this repository before your first coding session.
+**Local CLI (Primary Use)**: No setup needed! Just open terminal in this folder and run `claude`.
 
-### Steps to Enable Claude Code:
-1. Go to GitHub Settings for this repository
-2. Navigate to: Settings > Integrations > GitHub Apps
-3. Find "Claude Code" and grant access to `RGgreenbhm/HomeTeam_Navigator`
-4. Alternatively, grant organization-wide access if available
+### Optional: GitHub Actions Integration
+If you want Claude to automatically review PRs on GitHub:
+1. Go to: https://github.com/apps/claude
+2. Install for `RGgreenbhm/HomeTeam_Navigator`
+3. Add `ANTHROPIC_API_KEY` to repository secrets (Settings > Secrets > Actions)
 
 ## First Session Checklist
 
-- [ ] Grant Claude Code repository access (see above)
+- [ ] (Optional) Install Claude GitHub App for PR reviews
 - [ ] Create `.env` file from `.env.template`
 - [ ] Configure Spruce API credentials for Home Team
 - [ ] Set up Azure storage account: `sthometeamworkspace`
