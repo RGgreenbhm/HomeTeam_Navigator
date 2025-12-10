@@ -1,0 +1,621 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PatientMasterRecord",
+  "description": "Consolidated patient record schema for Patient Explorer V1.0 - Home Team Medical Services",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["id", "demographics", "metadata"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique patient identifier (UUID)"
+    },
+    "demographics": {
+      "type": "object",
+      "required": ["first_name", "last_name", "date_of_birth"],
+      "properties": {
+        "first_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "last_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "middle_name": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "date_of_birth": {
+          "type": "string",
+          "format": "date",
+          "description": "ISO 8601 date format (YYYY-MM-DD)"
+        },
+        "gender": {
+          "type": "string",
+          "enum": ["male", "female", "other", "unknown"],
+          "default": "unknown"
+        },
+        "mrn": {
+          "type": "string",
+          "description": "Medical Record Number from Allscripts"
+        },
+        "ssn_last4": {
+          "type": "string",
+          "pattern": "^[0-9]{4}$",
+          "description": "Last 4 digits of SSN (for verification only)"
+        },
+        "phone_home": {
+          "type": "string",
+          "pattern": "^[0-9]{10}$",
+          "description": "10-digit phone number without formatting"
+        },
+        "phone_cell": {
+          "type": "string",
+          "pattern": "^[0-9]{10}$"
+        },
+        "phone_preferred": {
+          "type": "string",
+          "enum": ["home", "cell"],
+          "default": "cell"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "address": {
+          "type": "object",
+          "properties": {
+            "line1": {
+              "type": "string",
+              "maxLength": 255
+            },
+            "line2": {
+              "type": "string",
+              "maxLength": 255
+            },
+            "city": {
+              "type": "string",
+              "maxLength": 100
+            },
+            "state": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 2,
+              "pattern": "^[A-Z]{2}$"
+            },
+            "zip": {
+              "type": "string",
+              "pattern": "^[0-9]{5}(-[0-9]{4})?$"
+            }
+          }
+        },
+        "emergency_contact": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "relationship": { "type": "string" },
+            "phone": { "type": "string" }
+          }
+        }
+      }
+    },
+    "identifiers": {
+      "type": "object",
+      "description": "External system identifiers",
+      "properties": {
+        "spruce_id": {
+          "type": "string",
+          "description": "Spruce Health contact ID"
+        },
+        "athena_id": {
+          "type": "string",
+          "description": "Future: Athena One patient ID"
+        },
+        "allscripts_mrn": {
+          "type": "string",
+          "description": "Legacy Allscripts MRN"
+        },
+        "allscripts_account": {
+          "type": "string",
+          "description": "Allscripts account number"
+        },
+        "medicare_mbi": {
+          "type": "string",
+          "description": "Medicare Beneficiary Identifier"
+        }
+      }
+    },
+    "insurance": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "object",
+          "properties": {
+            "provider": { "type": "string" },
+            "plan_name": { "type": "string" },
+            "member_id": { "type": "string" },
+            "group_number": { "type": "string" },
+            "subscriber_name": { "type": "string" },
+            "subscriber_relationship": { 
+              "type": "string",
+              "enum": ["self", "spouse", "child", "other"]
+            }
+          }
+        },
+        "secondary": {
+          "type": "object",
+          "properties": {
+            "provider": { "type": "string" },
+            "plan_name": { "type": "string" },
+            "member_id": { "type": "string" },
+            "group_number": { "type": "string" }
+          }
+        },
+        "medicare_part_b": {
+          "type": "boolean",
+          "description": "Has active Medicare Part B"
+        },
+        "qmb_status": {
+          "type": "boolean",
+          "description": "Qualified Medicare Beneficiary status"
+        },
+        "medicaid": {
+          "type": "boolean",
+          "description": "Has Medicaid coverage"
+        }
+      }
+    },
+    "apcm": {
+      "type": "object",
+      "description": "Advanced Primary Care Management enrollment tracking",
+      "properties": {
+        "enrolled": {
+          "type": "boolean",
+          "default": false
+        },
+        "enrolled_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "level": {
+          "type": "string",
+          "enum": ["G0556", "G0557", "G0558"],
+          "description": "G0556=1 chronic, G0557=2+ chronic, G0558=2+ with QMB"
+        },
+        "icd_codes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Z][0-9]{2}(\\.[0-9]{1,4})?$"
+          },
+          "description": "Qualifying ICD-10 diagnosis codes"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "pending", "removed", "hold"],
+          "default": "pending"
+        },
+        "continue_ht": {
+          "type": "boolean",
+          "description": "Patient elected to continue APCM with Home Team"
+        },
+        "revoke_sv": {
+          "type": "boolean",
+          "description": "Patient authorized Southview billing revocation"
+        },
+        "last_billing_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "consent": {
+      "type": "object",
+      "description": "Consent tracking for practice transition",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["pending", "outreach_sent", "consented", "declined", "unreachable"],
+          "default": "pending"
+        },
+        "method": {
+          "type": "string",
+          "enum": ["spruce", "phone", "mail", "in_person", "docusign", "microsoft_forms"]
+        },
+        "consent_date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "outreach_date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "token": {
+          "type": "string",
+          "description": "Unique consent form token"
+        },
+        "token_expires": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "records_retention_consent": {
+          "type": "boolean",
+          "description": "Consented to records retention by Home Team"
+        },
+        "documented_by": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "tags": {
+      "type": "object",
+      "description": "Standardized Spruce tags for patient categorization",
+      "properties": {
+        "team": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["team_green", "team_lachandra", "team_lindsay", "team_jenny"]
+          },
+          "description": "Assigned care team members"
+        },
+        "loc": {
+          "type": "string",
+          "enum": ["loc_il", "loc_al", "loc_mc", "loc_office", "loc_home"],
+          "description": "Level of Care: IL=Independent, AL=Assisted, MC=Memory Care"
+        },
+        "status": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "apcm",
+              "consent_pending",
+              "consent_obtained",
+              "high_priority",
+              "new_patient",
+              "transition_complete"
+            ]
+          }
+        },
+        "communication": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["prefer_sms", "prefer_call", "family_contact", "no_sms"]
+          }
+        },
+        "custom": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "User-defined custom tags"
+        }
+      }
+    },
+    "clinical": {
+      "type": "object",
+      "description": "Clinical summary data - populated from screenshots/OneNote/EMR extracts",
+      "properties": {
+        "problems": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": { "type": "string" },
+              "icd10": { 
+                "type": "string",
+                "pattern": "^[A-Z][0-9]{2}(\\.[0-9]{1,4})?$"
+              },
+              "status": { 
+                "type": "string", 
+                "enum": ["active", "resolved", "inactive"] 
+              },
+              "onset_date": { "type": "string", "format": "date" },
+              "resolved_date": { "type": "string", "format": "date" },
+              "notes": { "type": "string" },
+              "source": { "type": "string" }
+            }
+          }
+        },
+        "medications": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "generic_name": { "type": "string" },
+              "dosage": { "type": "string" },
+              "frequency": { "type": "string" },
+              "route": { "type": "string", "enum": ["oral", "topical", "injection", "inhalation", "other"] },
+              "prescriber": { "type": "string" },
+              "start_date": { "type": "string", "format": "date" },
+              "end_date": { "type": "string", "format": "date" },
+              "active": { "type": "boolean", "default": true },
+              "prn": { "type": "boolean", "default": false },
+              "indication": { "type": "string" }
+            }
+          }
+        },
+        "allergies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "allergen": { "type": "string" },
+              "type": { "type": "string", "enum": ["drug", "food", "environmental", "other"] },
+              "reaction": { "type": "string" },
+              "severity": { "type": "string", "enum": ["mild", "moderate", "severe", "unknown"] },
+              "onset_date": { "type": "string", "format": "date" }
+            }
+          }
+        },
+        "vitals_latest": {
+          "type": "object",
+          "properties": {
+            "date": { "type": "string", "format": "date" },
+            "blood_pressure_systolic": { "type": "integer", "minimum": 50, "maximum": 300 },
+            "blood_pressure_diastolic": { "type": "integer", "minimum": 30, "maximum": 200 },
+            "heart_rate": { "type": "integer", "minimum": 30, "maximum": 250 },
+            "respiratory_rate": { "type": "integer", "minimum": 5, "maximum": 60 },
+            "temperature_f": { "type": "number", "minimum": 90, "maximum": 110 },
+            "weight_lbs": { "type": "number", "minimum": 50, "maximum": 700 },
+            "height_inches": { "type": "number", "minimum": 24, "maximum": 96 },
+            "bmi": { "type": "number", "minimum": 10, "maximum": 80 },
+            "oxygen_saturation": { "type": "number", "minimum": 50, "maximum": 100 }
+          }
+        },
+        "health_maintenance": {
+          "type": "array",
+          "description": "Preventive care and screening tracking",
+          "items": {
+            "type": "object",
+            "properties": {
+              "item": { "type": "string" },
+              "due_date": { "type": "string", "format": "date" },
+              "last_completed": { "type": "string", "format": "date" },
+              "status": { "type": "string", "enum": ["due", "overdue", "completed", "declined"] },
+              "notes": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "encounters": {
+      "type": "array",
+      "description": "Visit history",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "type": {
+            "type": "string",
+            "enum": ["office_visit", "telehealth", "home_visit", "phone_call", "hospital", "emergency", "procedure"]
+          },
+          "provider": { "type": "string" },
+          "chief_complaint": { "type": "string" },
+          "diagnoses": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "assessment": { "type": "string" },
+          "plan": { "type": "string" },
+          "cpt_codes": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "source": {
+            "type": "string",
+            "description": "System/source of this encounter data"
+          }
+        }
+      }
+    },
+    "scheduling": {
+      "type": "object",
+      "description": "Upcoming appointments and scheduling",
+      "properties": {
+        "upcoming_appointments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": { "type": "string", "format": "date-time" },
+              "type": { "type": "string" },
+              "provider": { "type": "string" },
+              "location": { "type": "string" },
+              "status": { "type": "string", "enum": ["scheduled", "confirmed", "cancelled", "completed", "no_show"] },
+              "notes": { "type": "string" }
+            }
+          }
+        },
+        "last_visit_date": { "type": "string", "format": "date" },
+        "next_follow_up_due": { "type": "string", "format": "date" },
+        "follow_up_interval_days": { "type": "integer" }
+      }
+    },
+    "screenshots": {
+      "type": "array",
+      "description": "References to captured screenshots stored in Azure Blob",
+      "items": {
+        "type": "object",
+        "required": ["id", "category", "capture_date"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "demographics",
+              "face_sheet",
+              "encounters",
+              "scheduling",
+              "medications",
+              "allergies",
+              "problems",
+              "vitals",
+              "labs",
+              "imaging",
+              "procedures",
+              "care_plan",
+              "aledade_hcc",
+              "aledade_gaps",
+              "insurance",
+              "billing",
+              "other"
+            ]
+          },
+          "source": {
+            "type": "string",
+            "enum": ["allscripts", "athena", "aledade", "onenote", "spruce", "other"]
+          },
+          "capture_date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "captured_by": {
+            "type": "string"
+          },
+          "azure_blob_path": {
+            "type": "string",
+            "description": "Path in Azure Blob Storage"
+          },
+          "file_name": {
+            "type": "string"
+          },
+          "file_size_bytes": {
+            "type": "integer"
+          },
+          "ocr_text": {
+            "type": "string",
+            "description": "Extracted text from OCR processing"
+          },
+          "ocr_processed": {
+            "type": "boolean",
+            "default": false
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "communications": {
+      "type": "array",
+      "description": "Spruce communication log",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "date": { "type": "string", "format": "date-time" },
+          "type": {
+            "type": "string",
+            "enum": ["sms", "call", "secure_message", "fax", "email"]
+          },
+          "direction": {
+            "type": "string",
+            "enum": ["inbound", "outbound"]
+          },
+          "summary": { "type": "string" },
+          "staff_member": { "type": "string" },
+          "spruce_conversation_id": { "type": "string" },
+          "spruce_message_id": { "type": "string" }
+        }
+      }
+    },
+    "care_plan": {
+      "type": "object",
+      "description": "Active care plan for APCM patients",
+      "properties": {
+        "created_date": { "type": "string", "format": "date" },
+        "last_updated": { "type": "string", "format": "date" },
+        "created_by": { "type": "string" },
+        "goals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "goal": { "type": "string" },
+              "target_date": { "type": "string", "format": "date" },
+              "status": { "type": "string", "enum": ["active", "achieved", "discontinued"] }
+            }
+          }
+        },
+        "interventions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "intervention": { "type": "string" },
+              "frequency": { "type": "string" },
+              "responsible_party": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["created_at", "updated_at"],
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "created_by": {
+          "type": "string"
+        },
+        "last_modified_by": {
+          "type": "string"
+        },
+        "version": {
+          "type": "integer",
+          "default": 1,
+          "description": "Record version for conflict resolution"
+        },
+        "data_sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Systems that contributed to this record"
+        },
+        "spruce_match_confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Confidence score for Spruce contact matching"
+        },
+        "spruce_match_method": {
+          "type": "string",
+          "enum": ["phone", "name_dob", "email", "manual"],
+          "description": "How this patient was matched to Spruce"
+        },
+        "last_sync_date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "active": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "storage_account": "stgreenclinicworkspace",
+  "container": "workspace-sync",
+  "sync_paths": [
+    {
+      "local": "data/",
+      "remote": "data/",
+      "pattern": "**/*",
+      "description": "Patient data files (PHI)"
+    },
+    {
+      "local": ".env",
+      "remote": "config/.env",
+      "description": "Environment credentials"
+    },
+    {
+      "local": "logs/",
+      "remote": "logs/",
+      "pattern": "*.log",
+      "description": "Application logs"
+    },
+    {
+      "local": ".gitignore-sync.json",
+      "remote": "config/.gitignore-sync.json",
+      "description": "Sync manifest (configuration)"
+    }
+  ],
+  "exclude_patterns": [
+    "*.pyc",
+    "__pycache__/",
+    ".venv/",
+    "node_modules/",
+    "*.tmp",
+    "~$*"
+  ],
+  "require_device_encryption": true,
+  "require_azure_ad_auth": true
+}

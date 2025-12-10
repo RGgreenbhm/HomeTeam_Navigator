@@ -1,0 +1,24 @@
+[server]
+# HIPAA: Run only on localhost
+address = "127.0.0.1"
+port = 8501
+headless = true
+
+# Disable telemetry for privacy
+enableStaticServing = false
+
+[browser]
+# Don't collect usage stats
+gatherUsageStats = false
+
+[theme]
+# Professional healthcare theme
+primaryColor = "#0066cc"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f0f2f6"
+textColor = "#1a1a1a"
+font = "sans serif"
+
+[client]
+# Show error details (local development)
+showErrorDetails = true

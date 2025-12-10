@@ -1,0 +1,80 @@
+# Dependencies
+node_modules/
+
+# Python virtual environment
+.venv/
+venv/
+ENV/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Patient data - NEVER commit PHI
+*.xlsx
+*.xls
+# Allow reference CSVs in docs/
+!docs/*.csv
+
+# Build outputs
+dist/
+dist-electron/
+out/
+release/
+*.log
+
+# Electron
+*.asar
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment files (may contain secrets)
+.env
+.env.local
+.env.*.local
+
+# Database files (PHI - NEVER commit)
+*.db
+*.sqlite
+*.sqlite3
+data/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Testing
+test-results/
+playwright-report/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# BMAD local files - NOW TRACKED for portability
+# .bmad-core/  # Uncomment to exclude from git if needed
+
+# Backup files
+*.bak
+*.backup
+nul

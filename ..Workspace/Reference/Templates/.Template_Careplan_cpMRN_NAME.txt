@@ -1,0 +1,218 @@
+ADVANCED PRIMARY CARE MANAGEMENT CARE PLAN SUMMARY FOR:
+
+Name: [Patient Name]
+DOB: [DOB]
+Gender: [Male | Female ]  
+MR#: [chart #]
+Care Management Enrollment Date: [date of consent]
+Care Management Consent Details: [location of consent documentation, likely an encounter]
+Insurance, Primary: [pt_insurance_primary]
+Insurance, Secondary: [pt_insurance_secondary]
+
+=== Advanced Primary Care Management (APCM) Program Orientation ===
+
+Thank you for choosing Home Team Medical Services as your medical home for APCM.  Advanced Primary Care takes traditional primary care to the next level by adding more proactive monitoring services and an integrated care team support. Our goal is to know and care for you on a personal level.  This journey begins by building a relationship with your dedicated primary care provider (PCP) so we can understand you on a human level and adjust our capabilities to better meet your goals. The rest of our team supports your PCP in this mission. 
+
+We view our relationship with you and the important people in your life as a partnership. You can help us find the best medical and treatment recommendations by verifying the accuracy of your information as it appears in your care plan below. While we update your care plan throughout the year, your Annual Wellness Visit is the time when we intend for you to meet with your PCP and Care Management Team Leader every year to address anything on your care plan that needs clarification.  Please invite any key family members or caregivers you want to be involved in this discussion to your Annual Visit.
+
+
+=== PEOPLE AND GROUPS INVOLVED IN YOUR CARE === 
+
+MEDICAL POWER OF ATTORNEY (mPOA):
+- Name: {{ **}}
+- Relation to you: {{** }}
+- Best contact phone: {{** }}
+
+OTHER FAMILY AND COMMUNITY CONTACTS:
+** Please tell us the name, relation to you, and best phone number to contact for any other people regularly involved in your care.
+
+PRIMARY CARE TEAM ROSTER:
+- Primary Care Provider: {{ LaChandra Watts, CRNP | Lindsay Bearden, CRNP }}
+- Primary Care Nurse: {{ Jenny Linard, RN}}
+- Support Team Leader: Robert Green, MD
+- Support Team Staff: Christi Wood
+- Community Director: David Rader, MD
+- Population Health Manager: Cecelia McDonald, LPN, ALA II 
+- Home Team Office Coordinator: Ashley Pullum 
+
+CONTINUITY MEDICAL PROVIDERS OR SPECIALISTS OUTSIDE OF HOME TEAM:
+- [ other medical providers... filter for Med Specialist ], [specialty]
+[(As we identify other medical professionals and specialists who are active your care, we will list them here.)]
+
+MEDICAL COMPANIES:
+- Home Health: {{ }}
+** As we identify home health companies or other agencies who are active in your care, we will list them here.
+
+
+=== CLINICAL GOALS ===
+
+1. PLAN FOR WELLNESS: list routine health maintenance recommendations and track whether you have had them, declined them, or specified a plan for how and when to address them.  These include items like vaccinations, cancer screening tests, and other routine preventative health assessments (like the questionnaires we review together during your annual visits). 
+
+2. MANAGE CHRONIC MEDICAL PROBLEMS: your known medical problems are listed in the problem list section of your chart and the care plan below. Relevant information for each condition is organized in ways that help us communicate to you what we know about you and for us to coordinate together on plans to manage your health needs. 
+
+3. SPECIFY PERSONALIZED STANDING ORDERS: these are orders your PCP and Care Team Physician Leader list so that your care management staff may do more to advocate for you between visits.  
+
+4. SPECIFY KEY CAREGIVERS: maintain a list of family members, and other people you want involved in your care.  This includes information about anyone you have named as a medical power of attorney or surrogate decision maker who can speak on your behalf if you are ever unable to speak for yourself. 
+
+5. SPECIFY PERSONALIZED GOALS OF CARE: this includes advanced directives like your preferences for code status (Physician Orders for Life Sustaining Treatment), and any specific functional goals you may have (for things you want to do, but have trouble doing on your own).  
+
+
+=== GENERAL PATIENT TASKS === 
+
+1. Call your support team at 205-709-1820 for all basic questions and non-emergency needs. 
+
+2. Call 911 for life threatening emergencies that cannot wait at least 24 hours for a response. 
+
+
+=== GENERAL CARE TEAM TASKS === 
+
+1. Review Protocol Orders with their associated diagnoses in the active medical problem list before and after every routine medical visit and make additional tasks as necessary to carry out intended care plan.  
+
+2. Reference Personalized Standing Orders section of care plan for things you may do on behalf of PCP and MD between visits
+
+
+=== MEDICATIONS ===
+<!-- List each active medication name, size, form, dose, instructions, as well as details of last known prescription including amount, amount form, duration (days), refill number, date prescribed, pharmacy where sent, and calculated "runs out date" that specifies how soon the patient may need a refill if the prescription is refilled as soon as able based on the way the Rx is written -->
+
+
+=== ALLERGIES ===
+<!-- List each active allergy, including name of the allergen, and any comments about the severity or details (if known) -->
+
+
+=== ACTIVE PROBLEM LIST (Category or diagnosis specific notes and reminders) ===
+
+ANNUAL WELLNESS VISIT (Z00.01):
+...
+Story: Annual Health Maintenance Review, including questionnaire and review of medical problem list and care plans with PCP and care team leader.
+...
+Impression: see careplan summary for details
+...
+Timeline:
+- MM/DD/YYYY: (Insurance at time of AWV +/- PSE)
+...
+Protocol:
+(   ) - complete Health Risk Assessment Questionnaire and update Care Plan assessments during every annual visit.
+(   ) - Refill all maintenance medications x 12 months
+(   ) - Schedule reminder for next annual in 1 year + 1 day
+
+
+COMPLEX CARE COORDINATION (Z71.89)
+... 
+Enrollment Status: {{active | pending | un-enrolled }}, started on {{DATE}}; see {{ new patient intake forms | visit note | chart documents | other (delete this box and add description manually) }} for consent documentation.
+... 
+APCM Diagnoses: (see list in Care Plan Module)
+... 
+APCM Assessments:
+- Functional Status: {{ambulatory | non-ambulatory }}, assistive devices: {{ none | list of assistive devices}}
+- Cognitive Status: {{ choice: | normal | impaired }}
+- Medication Management: {{ choice: | self managed | caregiver managed | staff managed }}
+- Environmental Concerns: {{ none | specified: ______ }}
+- Prognosis: {{average, compared to others with similar age and demographics | Below average due to multiple
+serious comorbid medical conditions | mapped}}
+- Treatment Goals: improve quality of life and lower risk of hospitalizations by proactive support of chronic, high risk problems.
+- CODE Status: {{ *Need to clarify* | FULL CODE | DNR }}
+... 
+Timeline:
+- [if present, list timeline details, otherwise omit]
+
+
+<!-- Template --> 
+[DX NAME] ([ICD code]): 
+... Story: [if present, list, otherwise omit -- Map from the "note" on the chart problem] 
+... Timeline:
+- [if present, list timeline details, otherwise omit]
+... Impression (as of [Date]): [impression from last visit date (if present, list, otherwise omit)]
+... Management Reminders: [if present, list, otherwise omit]
+... Protocol: [if present, list, otherwise omit]
+... Patient Goals: [if present, list, otherwise omit] 
+... Care Team Tasks: [if present, list, otherwise omit] 
+
+<!-- repeat for each Dx --> 
+
+
+=== HISTORICAL PROBLEM LIST (inactive conditions, information maintained for reference and context) ===
+
+
+=== HEALTH MAINTENANCE ===
+
+{PROSTATE (MEN)|BREAST (WOMEN)} CANCER SCREENING SUMMARY:
+... Story: [story for Ca screening ]
+... Timeline:
+- [if present, list timeline details, otherwise omit]
+... Status: [ up to date | overdue | pending clarification ] 
+... Next Due: [ (date) | no longer screening ]
+
+COLON CANCER SCREENING Cancer Screening:
+... Story: [story for Ca screening ]
+... Timeline:
+- [if present, list timeline details, otherwise omit]
+... Status: [ up to date | overdue | pending clarification ] 
+... Next Due: [ (date) | no longer screening ]
+
+
+IMMUNIZATION SUMMARY:
+
+Influenza Vaccine: 
+... Timeline:
+- [if present, list timeline details, otherwise omit]
+... Status: [Completed | Declined | Up To Date | Planned] 
+... Comments: [optional, including notes about next due date, if applicable] 
+... Next Due: [ CALCULATE, if not already done this season, now; if already done this season, next October 1st ]
+
+Pneumonia Vaccine:
+... Timeline:
+- [if present, list timeline details, otherwise omit]
+... Status: [Completed | Declined | Up To Date | Planned] 
+... Comments: [optional, if applicable]  
+... Next Due: [optional; usually 5+ years from last one]
+
+Shingles Vaccine
+... Timeline:
+- [if present, list timeline details, otherwise omit]
+... Status: [Completed | Declined | Up To Date | Planned] 
+... Comments: [optional, including notes about next due date, if applicable] 
+
+TDap Vaccine
+... Timeline:
+- [if present, list timeline details, otherwise omit]
+... Status: [Completed | Declined | Up To Date | Planned] 
+... Comments: [optional, including notes about next due date, if applicable] 
+
+COVID Vaccine
+... Timeline:
+- [if present, list timeline details, otherwise omit]
+... Status: [Completed | Declined | Up To Date | Planned] 
+... Comments: [optional, including notes about next due date, if applicable] 
+
+Other Vaccines
+... Timeline:
+- [if present, list timeline details, otherwise omit]
+... Status: [Completed | Declined | Up To Date | Planned] 
+... Comments: [optional, including notes about next due date, if applicable] 
+
+
+=== PERSONALIZED STANDING ORDERS === 
+(PCP/MD AUTHORIZED PRN (AS NEEDED) ORDERS) 
+
+Urinalysis orders
+- Trigger: patient, caregiver, or site staff report symptoms concerning for possible UTI
+- Actions: 
+1. Order urinalysis with UTI pro and reflex to culture
+2. Coordinate sample collection and processing with lab staff, monitor for results, and immediately notify PCP of abnormal results to direct initial therapy. 
+3. Schedule problem visit with PCP to further assess as soon as able. 
+4. Notify PCP to request additional orders if requested by patient, or if staff concerned about time sensitive symptoms that can't wait until next available appointment. 
+
+Respiratory Panel Orders:
+- Trigger: patient, caregiver, or site staff report symptoms concerning for upper respiratory tract infection that are bothersome to patient
+<> Decision: If within 48 hours of symptom onset:
+- Actions:
+1. <Decision> Was symptom onset greater than 72 hours? (Yes / No )
+<> If No,
+... 1A. Order Covid/flu swab or respiratory viral panel (depending on test kit availability)
+... 1B. Coordinate sample collection and processing with lab staff, monitor for results, and immediately notify PCP of abnormal results to direct initial therapy. 
+<> If Yes, 
+... proceed to step 2
+2. Offer Rx orders for Mucinex DM twice daily x 1 week for congestion, benzonatate 100 twice a day x 1 week for cough, Tylenol 500 mg three times daily x 7 days for pain and fever
+3. Schedule problem visit with PCP to further assess as soon as able. 
+4. Notify PCP to request additional orders if requested by patient, or if staff concerned about time sensitive symptoms that can't wait until next available appointment. 
+

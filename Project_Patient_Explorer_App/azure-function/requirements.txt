@@ -1,0 +1,5 @@
+# Azure Function - Consent Form Handler
+# Python 3.10+
+
+azure-functions>=1.17.0
+requests>=2.31.0

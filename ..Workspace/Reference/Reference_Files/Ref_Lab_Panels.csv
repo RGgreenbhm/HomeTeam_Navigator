@@ -1,0 +1,87 @@
+PANEL_NAME,PANEL_CODE,PANEL_DESCRIPTION,COMPONENT_LOINC,COMPONENT_NAME,CPT_CODE
+Basic Metabolic Panel,BMP,"Glucose, electrolytes, kidney function",2345-7,Glucose,80048
+Basic Metabolic Panel,BMP,"Glucose, electrolytes, kidney function",3094-0,BUN,80048
+Basic Metabolic Panel,BMP,"Glucose, electrolytes, kidney function",2160-0,Creatinine,80048
+Basic Metabolic Panel,BMP,"Glucose, electrolytes, kidney function",2951-2,Sodium,80048
+Basic Metabolic Panel,BMP,"Glucose, electrolytes, kidney function",2823-3,Potassium,80048
+Basic Metabolic Panel,BMP,"Glucose, electrolytes, kidney function",2075-0,Chloride,80048
+Basic Metabolic Panel,BMP,"Glucose, electrolytes, kidney function",2028-9,CO2,80048
+Basic Metabolic Panel,BMP,"Glucose, electrolytes, kidney function",17861-6,Calcium,80048
+Comprehensive Metabolic Panel,CMP,"BMP + liver function tests",2345-7,Glucose,80053
+Comprehensive Metabolic Panel,CMP,"BMP + liver function tests",3094-0,BUN,80053
+Comprehensive Metabolic Panel,CMP,"BMP + liver function tests",2160-0,Creatinine,80053
+Comprehensive Metabolic Panel,CMP,"BMP + liver function tests",2951-2,Sodium,80053
+Comprehensive Metabolic Panel,CMP,"BMP + liver function tests",2823-3,Potassium,80053
+Comprehensive Metabolic Panel,CMP,"BMP + liver function tests",2075-0,Chloride,80053
+Comprehensive Metabolic Panel,CMP,"BMP + liver function tests",2028-9,CO2,80053
+Comprehensive Metabolic Panel,CMP,"BMP + liver function tests",17861-6,Calcium,80053
+Comprehensive Metabolic Panel,CMP,"BMP + liver function tests",1742-6,ALT,80053
+Comprehensive Metabolic Panel,CMP,"BMP + liver function tests",1920-8,AST,80053
+Comprehensive Metabolic Panel,CMP,"BMP + liver function tests",6768-6,Alkaline Phosphatase,80053
+Comprehensive Metabolic Panel,CMP,"BMP + liver function tests",1975-2,Bilirubin Total,80053
+Comprehensive Metabolic Panel,CMP,"BMP + liver function tests",1751-7,Albumin,80053
+Comprehensive Metabolic Panel,CMP,"BMP + liver function tests",2885-2,Total Protein,80053
+Complete Blood Count,CBC,"Blood cell counts and indices",6690-2,WBC,85025
+Complete Blood Count,CBC,"Blood cell counts and indices",789-8,RBC,85025
+Complete Blood Count,CBC,"Blood cell counts and indices",718-7,Hemoglobin,85025
+Complete Blood Count,CBC,"Blood cell counts and indices",4544-3,Hematocrit,85025
+Complete Blood Count,CBC,"Blood cell counts and indices",787-2,MCV,85025
+Complete Blood Count,CBC,"Blood cell counts and indices",785-6,MCH,85025
+Complete Blood Count,CBC,"Blood cell counts and indices",786-4,MCHC,85025
+Complete Blood Count,CBC,"Blood cell counts and indices",788-0,RDW,85025
+Complete Blood Count,CBC,"Blood cell counts and indices",777-3,Platelets,85025
+Lipid Panel,LIPID,"Cholesterol and triglycerides",2093-3,Total Cholesterol,80061
+Lipid Panel,LIPID,"Cholesterol and triglycerides",13457-7,LDL Cholesterol,80061
+Lipid Panel,LIPID,"Cholesterol and triglycerides",2085-9,HDL Cholesterol,80061
+Lipid Panel,LIPID,"Cholesterol and triglycerides",2571-8,Triglycerides,80061
+Hepatic Function Panel,HFP,"Liver function tests",1742-6,ALT,80076
+Hepatic Function Panel,HFP,"Liver function tests",1920-8,AST,80076
+Hepatic Function Panel,HFP,"Liver function tests",6768-6,Alkaline Phosphatase,80076
+Hepatic Function Panel,HFP,"Liver function tests",1975-2,Bilirubin Total,80076
+Hepatic Function Panel,HFP,"Liver function tests",1968-7,Bilirubin Direct,80076
+Hepatic Function Panel,HFP,"Liver function tests",1751-7,Albumin,80076
+Hepatic Function Panel,HFP,"Liver function tests",2885-2,Total Protein,80076
+Renal Function Panel,RENAL,"Kidney function tests",3094-0,BUN,80069
+Renal Function Panel,RENAL,"Kidney function tests",2160-0,Creatinine,80069
+Renal Function Panel,RENAL,"Kidney function tests",33914-3,eGFR,80069
+Renal Function Panel,RENAL,"Kidney function tests",2951-2,Sodium,80069
+Renal Function Panel,RENAL,"Kidney function tests",2823-3,Potassium,80069
+Renal Function Panel,RENAL,"Kidney function tests",2075-0,Chloride,80069
+Renal Function Panel,RENAL,"Kidney function tests",2028-9,CO2,80069
+Renal Function Panel,RENAL,"Kidney function tests",2777-1,Phosphorus,80069
+Renal Function Panel,RENAL,"Kidney function tests",17861-6,Calcium,80069
+Renal Function Panel,RENAL,"Kidney function tests",1751-7,Albumin,80069
+Renal Function Panel,RENAL,"Kidney function tests",2345-7,Glucose,80069
+Thyroid Panel,THYROID,"Thyroid function tests",3016-3,TSH,84443
+Thyroid Panel,THYROID,"Thyroid function tests",3026-2,Free T4,84439
+Thyroid Panel,THYROID,"Thyroid function tests",3024-7,Free T3,84481
+Coagulation Panel,COAG,"Clotting function tests",5902-2,PT,85610
+Coagulation Panel,COAG,"Clotting function tests",6301-6,INR,85610
+Coagulation Panel,COAG,"Clotting function tests",3173-2,PTT,85730
+Iron Panel,IRON,"Iron status",2502-3,Iron,83540
+Iron Panel,IRON,"Iron status",2276-4,TIBC,83550
+Iron Panel,IRON,"Iron status",2498-4,Ferritin,82728
+Iron Panel,IRON,"Iron status",14800-7,Iron Saturation,83550
+Urinalysis,UA,"Urine screening",5811-5,Specific Gravity,81003
+Urinalysis,UA,"Urine screening",5803-2,pH,81003
+Urinalysis,UA,"Urine screening",2349-9,Glucose,81003
+Urinalysis,UA,"Urine screening",20454-5,Protein,81003
+Urinalysis,UA,"Urine screening",5770-3,Blood,81003
+Urinalysis,UA,"Urine screening",5799-2,Leukocytes,81003
+Urinalysis,UA,"Urine screening",5802-4,Nitrite,81003
+Urinalysis,UA,"Urine screening",20505-4,Bilirubin,81003
+Urinalysis,UA,"Urine screening",5797-6,Ketones,81003
+Urinalysis,UA,"Urine screening",5794-3,Urobilinogen,81003
+Hemoglobin A1c,A1C,"Diabetes monitoring",4548-4,Hemoglobin A1c,83036
+Diabetes Panel,DM,"Diabetes screening/monitoring",4548-4,Hemoglobin A1c,
+Diabetes Panel,DM,"Diabetes screening/monitoring",2345-7,Fasting Glucose,
+Diabetes Panel,DM,"Diabetes screening/monitoring",14749-6,Fructosamine,
+Cardiac Panel,CARDIAC,"Heart biomarkers",49563-0,Troponin I,
+Cardiac Panel,CARDIAC,"Heart biomarkers",42176-8,BNP,
+Cardiac Panel,CARDIAC,"Heart biomarkers",1988-5,CK Total,
+Cardiac Panel,CARDIAC,"Heart biomarkers",13969-1,CK-MB,
+Inflammatory Markers,INFLAM,"Inflammation indicators",14682-9,CRP,
+Inflammatory Markers,INFLAM,"Inflammation indicators",30341-2,ESR,
+Vitamin Panel,VITAMIN,"Vitamin levels",14927-8,Vitamin D,
+Vitamin Panel,VITAMIN,"Vitamin levels",2132-9,Vitamin B12,
+Vitamin Panel,VITAMIN,"Vitamin levels",2284-8,Folate,

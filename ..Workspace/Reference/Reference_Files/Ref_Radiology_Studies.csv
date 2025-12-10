@@ -1,0 +1,60 @@
+MODALITY,BODY_PART,STUDY_NAME,COMMON_ALIASES,CPT_CODES,TYPICAL_INDICATIONS,CONTRAST,RADIATION
+XR,Chest,Chest X-ray 2 View,"CXR, Chest radiograph, PA/Lat chest",71046,"Cough, SOB, pneumonia, CHF, lung mass",None,Low
+XR,Chest,Chest X-ray 1 View,"CXR single view, PA chest, portable chest",71045,"Screening, line placement, quick assessment",None,Low
+XR,Abdomen,Abdominal X-ray,"KUB, Flat plate, Abd film",74018,"Bowel obstruction, constipation, foreign body",None,Low
+XR,Spine Cervical,Cervical Spine X-ray,"C-spine XR, Neck X-ray",72040,"Neck pain, trauma, degenerative changes",None,Low
+XR,Spine Lumbar,Lumbar Spine X-ray,"L-spine XR, Low back X-ray",72100,"Back pain, scoliosis, degenerative changes",None,Low
+XR,Knee,Knee X-ray,"Knee film",73560,"Knee pain, OA, trauma, effusion",None,Low
+XR,Hip,Hip X-ray,"Hip film, Pelvis X-ray",73501,"Hip pain, fracture, OA, AVN",None,Low
+XR,Shoulder,Shoulder X-ray,"Shoulder film",73030,"Shoulder pain, dislocation, fracture",None,Low
+XR,Hand,Hand X-ray,"Hand film",73130,"Hand pain, fracture, arthritis",None,Low
+XR,Foot,Foot X-ray,"Foot film",73630,"Foot pain, fracture, bunion",None,Low
+XR,Ankle,Ankle X-ray,"Ankle film",73610,"Ankle pain, sprain, fracture",None,Low
+XR,Wrist,Wrist X-ray,"Wrist film",73100,"Wrist pain, fracture, carpal tunnel",None,Low
+CT,Head,CT Head without Contrast,"CT Brain, Head CT, Non-con head CT",70450,"Headache, stroke, trauma, altered mental status",None,Moderate
+CT,Head,CT Head with Contrast,"CT Brain with contrast",70460,"Mass, infection, vascular lesion",IV Contrast,Moderate
+CT,Chest,CT Chest without Contrast,"Chest CT, HRCT, Lung CT",71250,"Lung nodule, ILD, emphysema",None,Moderate
+CT,Chest,CT Chest with Contrast,"Chest CT with contrast",71260,"PE eval, mass, lymphadenopathy",IV Contrast,Moderate
+CT,Chest,CT Angiography Chest,"CTA Chest, PE protocol",71275,"Pulmonary embolism",IV Contrast,Moderate
+CT,Abdomen,CT Abdomen/Pelvis without Contrast,"CT A/P, Abd/Pel CT",74176,"Kidney stones, appendicitis screening",None,Moderate
+CT,Abdomen,CT Abdomen/Pelvis with Contrast,"CT A/P with contrast",74177,"Abdominal pain, mass, infection, staging",IV Contrast,Moderate
+CT,Abdomen,CT Angiography Abdomen,"CTA Abdomen, Mesenteric CTA",74175,"Mesenteric ischemia, AAA eval",IV Contrast,Moderate
+CT,Spine Cervical,CT Cervical Spine,"CT C-spine",72125,"Trauma, fracture, stenosis",None,Moderate
+CT,Spine Lumbar,CT Lumbar Spine,"CT L-spine",72131,"Fracture, stenosis, post-surgical eval",None,Moderate
+CT,Sinus,CT Sinus,"Sinus CT",70486,"Sinusitis, polyps, pre-surgical planning",None,Moderate
+MRI,Brain,MRI Brain without Contrast,"Brain MRI, Head MRI",70551,"Headache, seizure, MS, stroke, dementia",None,None
+MRI,Brain,MRI Brain with Contrast,"Brain MRI with gad",70552,"Mass, infection, MS follow-up",IV Gadolinium,None
+MRI,Brain,MRI Brain with and without Contrast,"Brain MRI w/wo",70553,"Tumor, metastases, pituitary",IV Gadolinium,None
+MRI,Spine Cervical,MRI Cervical Spine without Contrast,"MRI C-spine, Neck MRI",72141,"Neck pain, radiculopathy, myelopathy",None,None
+MRI,Spine Lumbar,MRI Lumbar Spine without Contrast,"MRI L-spine, Low back MRI",72148,"Back pain, radiculopathy, stenosis, disc herniation",None,None
+MRI,Spine Thoracic,MRI Thoracic Spine without Contrast,"MRI T-spine",72146,"Mid-back pain, cord lesion",None,None
+MRI,Knee,MRI Knee without Contrast,"Knee MRI",73721,"Meniscus tear, ACL, ligament injury",None,None
+MRI,Shoulder,MRI Shoulder without Contrast,"Shoulder MRI",73221,"Rotator cuff, labral tear",None,None
+MRI,Hip,MRI Hip without Contrast,"Hip MRI",73721,"AVN, labral tear, occult fracture",None,None
+MRI,Abdomen,MRI Abdomen without Contrast,"Abdominal MRI, Liver MRI",74181,"Liver lesion, pancreas eval",None,None
+MRI,Abdomen,MRCP,Magnetic resonance cholangiopancreatography,74181,"Bile duct stones, stricture, pancreatic duct",None,None
+MRI,Pelvis,MRI Pelvis without Contrast,"Pelvic MRI",72195,"Uterine fibroids, prostate, rectal cancer staging",None,None
+US,Abdomen,Ultrasound Abdomen Complete,"US Abd, Abdominal sono",76700,"RUQ pain, gallstones, liver, spleen, kidneys",None,None
+US,Abdomen,Ultrasound Abdomen Limited,"US Abd limited, RUQ US",76705,"Focused eval (gallbladder, kidney, etc.)",None,None
+US,Pelvis,Ultrasound Pelvis,"Pelvic US, GYN US",76856,"Pelvic pain, ovarian cyst, uterine mass",None,None
+US,Pelvis,Transvaginal Ultrasound,"TVUS, Endovaginal US",76830,"Ovarian cyst, ectopic pregnancy, fibroids",None,None
+US,Thyroid,Ultrasound Thyroid,"Thyroid US, Neck US",76536,"Thyroid nodule, goiter, lymph nodes",None,None
+US,Breast,Ultrasound Breast,"Breast US",76641,"Palpable mass, cyst vs solid, mammogram follow-up",None,None
+US,Venous,Venous Duplex Lower Extremity,"DVT study, Leg vein US",93970,"DVT, leg swelling, leg pain",None,None
+US,Arterial,Arterial Duplex Lower Extremity,"ABI, Leg artery US",93925,"PAD, claudication, non-healing wound",None,None
+US,Carotid,Carotid Duplex,"Carotid US, Carotid Doppler",93880,"TIA, stroke workup, carotid stenosis",None,None
+US,Renal,Renal Ultrasound,"Kidney US",76770,"Hydronephrosis, kidney mass, renal failure",None,None
+US,Bladder,Bladder Ultrasound,"Post-void residual, PVR",51798,"Urinary retention, BPH, neurogenic bladder",None,None
+US,Scrotal,Scrotal Ultrasound,"Testicular US",76870,"Testicular pain, mass, torsion",None,None
+ECHO,Heart,Echocardiogram TTE,"Echo, Cardiac US, Transthoracic echo",93306,"CHF, murmur, valve disease, EF assessment",None,None
+ECHO,Heart,Echocardiogram TEE,"TEE, Transesophageal echo",93312,"Endocarditis, LA appendage, valve detail",None,None
+ECHO,Heart,Stress Echocardiogram,"Stress echo, Dobutamine echo",93350,"Ischemia evaluation, CAD workup",None,None
+NUC,Heart,Nuclear Stress Test,"Myocardial perfusion, SPECT MPI",78452,"CAD evaluation, ischemia, viability",Radiotracer,Low
+NUC,Thyroid,Thyroid Uptake and Scan,"I-123 scan, Thyroid scan",78014,"Hyperthyroidism, thyroid nodule characterization",Radiotracer,Low
+NUC,Bone,Bone Scan,"Bone scintigraphy, Skeletal survey",78306,"Metastatic workup, occult fracture, infection",Radiotracer,Low
+NUC,Lung,VQ Scan,"Ventilation/perfusion scan",78582,"Pulmonary embolism (if CT contraindicated)",Radiotracer,Low
+MAMMO,Breast,Mammogram Screening,"Screening mammo",77067,"Routine breast cancer screening",None,Low
+MAMMO,Breast,Mammogram Diagnostic,"Diagnostic mammo",77066,"Abnormal screening, palpable mass, symptoms",None,Low
+DEXA,Bone,DEXA Bone Density,"Bone density, DXA",77080,"Osteoporosis screening, fracture risk",None,Very Low
+FLUORO,GI,Upper GI Series,"Barium swallow, Esophagram",74240,"Dysphagia, GERD, hiatal hernia",Barium,Moderate
+FLUORO,GI,Barium Enema,"Lower GI series",74270,"Colon eval (if colonoscopy contraindicated)",Barium,Moderate

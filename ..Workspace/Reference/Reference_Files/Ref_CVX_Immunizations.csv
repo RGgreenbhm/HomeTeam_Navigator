@@ -1,0 +1,48 @@
+CVX_CODE,SHORT_DESCRIPTION,FULL_VACCINE_NAME,VACCINE_GROUP,ROUTE,DOSE_SERIES,ADULT_SCHEDULE,CPT_CODE,NDC_EXAMPLES,STATUS,NOTES
+141,Influenza seasonal injectable,Influenza seasonal injectable preservative free,Influenza,IM,Annual,Every fall (Sep-Mar),90686,Various,Active,"Standard dose, age 18-64"
+197,Influenza high-dose quadrivalent,Influenza high-dose seasonal quadrivalent preservative free,Influenza,IM,Annual,Every fall (Sep-Mar) age 65+,90662,Various,Active,"High-dose for age 65+, 4x antigen"
+185,Influenza recombinant quadrivalent,Influenza seasonal recombinant quadrivalent injectable preservative free,Influenza,IM,Annual,Every fall (Sep-Mar),90682,Various,Active,"Flublok, egg-free option"
+140,Influenza seasonal intranasal,Influenza seasonal live attenuated for intranasal use,Influenza,Nasal,Annual,Every fall (Sep-Mar) age 2-49,90672,Various,Active,"FluMist, avoid if immunocompromised"
+33,Pneumococcal polysaccharide PPV23,Pneumococcal polysaccharide vaccine 23 valent,Pneumococcal,IM/SQ,1-2 doses,Age 65+ or high-risk,90732,00006-4943-00,Active,"Pneumovax 23, revaccinate once after 5 years if given before 65"
+215,Pneumococcal conjugate PCV20,Pneumococcal conjugate vaccine 20 valent,Pneumococcal,IM,1 dose,Age 65+ or high-risk adults 19-64,90677,00005-1971-02,Active,"Prevnar 20, preferred single-dose option per ACIP 2023"
+216,Pneumococcal conjugate PCV21,Pneumococcal conjugate vaccine 21 valent,Pneumococcal,IM,1 dose,Age 65+ or high-risk adults 19-64,90644,Various,Active,"Capvaxive, newest option 2024"
+133,Pneumococcal conjugate PCV13,Pneumococcal conjugate vaccine 13 valent,Pneumococcal,IM,1 dose,Previously recommended; now PCV20/21 preferred,90670,00005-1971-02,Active,"Prevnar 13, legacy - use PCV20/21 for new patients"
+121,Zoster recombinant,Zoster vaccine recombinant,Herpes Zoster,IM,2 doses,Age 50+; 2-6 months apart,90750,58160-0823-11,Active,"Shingrix, 2 doses required, >90% effective"
+21,Varicella,Varicella virus vaccine,Varicella,SQ,2 doses,Non-immune adults; 4-8 weeks apart,90716,00006-4827-00,Active,"Varivax, check titers before vaccinating adults"
+3,MMR,Measles Mumps and Rubella virus vaccine,MMR,SQ,1-2 doses,Born after 1957 without immunity; healthcare workers 2 doses,90707,00006-4681-00,Active,"M-M-R II, check titers in adults"
+94,MMRV,Measles Mumps Rubella and Varicella virus vaccine,MMR,SQ,2 doses,Age 12 months-12 years only,90710,00006-4999-00,Active,"ProQuad, pediatric only"
+115,Tdap,Tetanus Diphtheria and Pertussis vaccine,Tetanus,IM,1 dose then Td,Once as adult; then Td every 10 years,90715,49281-0400-10,Active,"Boostrix or Adacel, give once then Td boosters"
+139,Td adult,Tetanus and Diphtheria toxoids adsorbed adult,Tetanus,IM,Every 10 years,Booster every 10 years after Tdap,90714,49281-0278-10,Active,"Tenivac, for routine boosters"
+113,Td adult preservative free,Tetanus and Diphtheria toxoids adsorbed preservative free,Tetanus,IM,Every 10 years,Booster every 10 years,90714,Various,Active,Preservative-free option
+52,Hepatitis A adult,Hepatitis A vaccine adult dosage,Hepatitis A,IM,2 doses,0 and 6-12 months,90632,58160-0826-01,Active,"Havrix or Vaqta, 2-dose series"
+104,Hepatitis A-Hepatitis B,Hepatitis A and Hepatitis B vaccine,Hepatitis A/B,IM,3 doses,0-1-6 months,90636,58160-0815-52,Active,"Twinrix, combination vaccine"
+43,Hepatitis B adult,Hepatitis B vaccine adult dosage,Hepatitis B,IM,2-3 doses,0-1-6 months (3-dose) or 0-1 month (2-dose),90746,58160-0820-11,Active,"Engerix-B or Recombivax HB"
+189,Hepatitis B CpG adjuvanted,Hepatitis B surface antigen vaccine CpG adjuvanted,Hepatitis B,IM,2 doses,0 and 1 month,90739,42874-0016-10,Active,"Heplisav-B, 2-dose series, faster completion"
+62,HPV quadrivalent,Human Papillomavirus vaccine quadrivalent,HPV,IM,2-3 doses,Age 9-45; 2 doses if started before 15,90649,00006-4045-41,Inactive,"Gardasil, replaced by 9-valent"
+165,HPV 9-valent,Human Papillomavirus 9-valent vaccine,HPV,IM,2-3 doses,Age 9-45; 2 doses if <15; 3 doses if 15-45,90651,00006-4121-02,Active,"Gardasil 9, preferred HPV vaccine"
+114,MenACWY conjugate,Meningococcal conjugate vaccine serogroups A C W Y,Meningococcal,IM,1-2 doses,"First-year college students, military, travelers, asplenia",90734,49281-0589-05,Active,"Menactra or Menveo, required for college"
+162,MenB recombinant,Meningococcal B vaccine recombinant,Meningococcal,IM,2-3 doses,Age 16-23 (shared decision) or high-risk,90620,58160-0976-06,Active,"Bexsero (2 doses) or Trumenba (3 doses)"
+163,MenB OMV,Meningococcal B vaccine outer membrane vesicle,Meningococcal,IM,2 doses,Age 16-23 (shared decision) or high-risk,90621,49281-0640-05,Active,Trumenba - 3 dose series
+207,COVID-19 mRNA bivalent Pfizer,SARS-COV-2 COVID-19 mRNA bivalent vaccine Pfizer-BioNTech,COVID-19,IM,Annual,Annual for age 6 months+,91322,Various,Active,"Comirnaty bivalent, 2024-25 formula"
+228,COVID-19 mRNA 2024-25 Pfizer,SARS-COV-2 COVID-19 mRNA LNP-S bivalent vaccine Pfizer,COVID-19,IM,Annual,Annual for all ages,91323,Various,Active,"2024-2025 formula"
+229,COVID-19 mRNA 2024-25 Moderna,SARS-COV-2 COVID-19 mRNA LNP-S bivalent vaccine Moderna,COVID-19,IM,Annual,Annual for all ages,91324,Various,Active,"Spikevax 2024-2025 formula"
+230,COVID-19 protein subunit 2024-25,SARS-COV-2 COVID-19 protein subunit vaccine Novavax,COVID-19,IM,Annual,Annual for age 12+,91325,Various,Active,"Novavax 2024-2025 formula"
+183,RSV,Respiratory syncytial virus vaccine,RSV,IM,1 dose,Age 60+ (shared decision) or 32-36 weeks pregnant,90678,Various,Active,"Arexvy (GSK) or Abrysvo (Pfizer), new 2023"
+18,Rabies IM,Rabies vaccine for intramuscular injection,Rabies,IM,3-5 doses,Pre-exposure (3) or post-exposure (4-5),90675,49281-0250-51,Active,"Imovax or RabAvert, post-exposure is urgent"
+10,IPV,Inactivated poliovirus vaccine,Polio,IM/SQ,1 dose,Unvaccinated adults traveling to endemic areas,90713,49281-0860-55,Active,IPOL - most US adults immune from childhood
+110,DTaP-Hep B-IPV,DTaP-Hepatitis B and Poliovirus vaccine,Combination,IM,3 doses,Pediatric only,90723,58160-0811-52,Active,"Pediarix, pediatric combination"
+120,DTaP-Hib-IPV,DTaP-Haemophilus influenzae type b conjugate and Poliovirus vaccine,Combination,IM,4 doses,Pediatric only,90698,49281-0510-05,Active,"Pentacel, pediatric combination"
+130,DTaP-IPV,Diphtheria Tetanus Pertussis and Poliovirus vaccine,Combination,IM,5 doses,Pediatric only,90696,49281-0396-05,Active,"Kinrix/Quadracel, pediatric combination"
+190,Typhoid conjugate,Typhoid conjugate vaccine,Travel,IM,1 dose,Travelers to endemic areas,90691,Various,Active,Newer option
+25,Typhoid oral,Typhoid vaccine live oral Ty21a,Travel,Oral,4 doses,Travelers to endemic areas; take 1 cap every other day,90690,69401-0001-02,Active,"Vivotif, take on empty stomach"
+101,Typhoid injectable,Typhoid Vi capsular polysaccharide vaccine,Travel,IM,1 dose,Travelers to endemic areas; boost every 2 years if ongoing risk,90691,49281-0790-51,Active,Typhim Vi
+160,Japanese encephalitis,Japanese encephalitis virus vaccine inactivated,Travel,IM,2 doses,Travelers to Asia; 0 and 28 days,90738,Various,Active,Ixiaro
+37,Yellow fever,Yellow fever vaccine,Travel,SQ,1 dose,Travelers to endemic areas in Africa/South America,90717,Various,Active,"YF-VAX, requires certified provider"
+83,Hepatitis A pediatric,Hepatitis A vaccine pediatric/adolescent dosage 2 dose schedule,Hepatitis A,IM,2 doses,Age 12 months-18 years,90633,58160-0825-43,Active,Pediatric dosing
+08,Hepatitis B adolescent,Hepatitis B vaccine adolescent dosage,Hepatitis B,IM,3 doses,Age 11-19 years,90744,Various,Active,Pediatric/adolescent dosing
+42,Hepatitis B adolescent high risk,Hepatitis B vaccine adolescent/high risk infant dosage,Hepatitis B,IM,3 doses,High-risk adolescents,90744,Various,Active,Higher dose for certain populations
+49,Hib conjugate,Haemophilus influenzae type b conjugate vaccine,Hib,IM,3-4 doses,Pediatric; adults with asplenia,90648,58160-0806-43,Active,"ActHIB, primarily pediatric"
+48,Hib-Hep B,Haemophilus influenzae type b and Hepatitis B vaccine,Combination,IM,3 doses,Pediatric only,90748,58160-0801-11,Active,"Comvax, pediatric combination"
+22,DTP,Diphtheria Tetanus Pertussis vaccine,Tetanus,IM,5 doses,Historical/pediatric - now use DTaP,90701,Various,Inactive,Replaced by DTaP
+20,DTaP,Diphtheria Tetanus and Pertussis vaccine,Tetanus,IM,5 doses,Pediatric series age 2m-6y,90700,49281-0286-10,Active,"Daptacel or Infanrix, pediatric series"
+85,Hepatitis A pediatric NOS,Hepatitis A vaccine pediatric/adolescent dosage not otherwise specified,Hepatitis A,IM,2 doses,Pediatric catch-up,90633,Various,Active,Generic pediatric Hep A

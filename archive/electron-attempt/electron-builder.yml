@@ -1,0 +1,49 @@
+# Patient Explorer - Electron Builder Configuration
+# https://www.electron.build/configuration/configuration
+
+appId: com.hometeam.patient-explorer
+productName: Patient Explorer
+copyright: Copyright © 2025 Home Team Medical Services
+
+directories:
+  output: release
+  buildResources: build
+
+files:
+  - dist/**/*
+  - package.json
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: build/icon.ico
+  requestedExecutionLevel: asInvoker
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Patient Explorer
+
+# Code signing (configure for production)
+# win:
+#   certificateFile: path/to/certificate.pfx
+#   certificatePassword: ${CERTIFICATE_PASSWORD}
+
+# Auto-update configuration (Phase 1B)
+# publish:
+#   provider: generic
+#   url: https://update.hometeam.local/patient-explorer
+
+# ASAR packaging (consider security implications)
+asar: true
+
+# Files to exclude from build
+files:
+  - "!**/*.{md,ts,tsx}"
+  - "!**/node_modules/*/{CHANGELOG.md,README.md,readme.md,README}"
+  - "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}"
+  - "!**/*.map"

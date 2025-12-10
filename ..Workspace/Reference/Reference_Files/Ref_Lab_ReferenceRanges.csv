@@ -1,0 +1,76 @@
+LOINC_CODE,TEST_NAME,COMPONENT,LOW_NORMAL,HIGH_NORMAL,CRITICAL_LOW,CRITICAL_HIGH,UNITS,SPECIMEN,AGE_GROUP,SEX,PANEL,NOTES
+4548-4,Hemoglobin A1c,Hemoglobin A1c/Hemoglobin.total,4.0,5.6,,,% of total Hgb,Blood,Adult,All,Diabetes Panel,"<5.7 Normal, 5.7-6.4 Prediabetes, >=6.5 Diabetes"
+2345-7,Glucose Fasting,Glucose,70,100,40,400,mg/dL,Serum/Plasma,Adult,All,BMP|CMP,"<100 Normal, 100-125 Prediabetes, >=126 Diabetes"
+2339-0,Glucose Random,Glucose,70,140,40,400,mg/dL,Serum/Plasma,Adult,All,,"Random glucose; >=200 with symptoms suggests diabetes"
+13457-7,LDL Cholesterol,Cholesterol.in LDL,0,100,,,mg/dL,Serum/Plasma,Adult,All,Lipid Panel,"<100 Optimal, 100-129 Near optimal, 130-159 Borderline high, 160-189 High, >=190 Very high"
+2085-9,HDL Cholesterol,Cholesterol.in HDL,40,60,,,mg/dL,Serum/Plasma,Adult,Male,Lipid Panel,">40 acceptable for men, >50 acceptable for women, >60 optimal"
+2085-9,HDL Cholesterol,Cholesterol.in HDL,50,60,,,mg/dL,Serum/Plasma,Adult,Female,Lipid Panel,">40 acceptable for men, >50 acceptable for women, >60 optimal"
+2093-3,Total Cholesterol,Cholesterol,0,200,,,mg/dL,Serum/Plasma,Adult,All,Lipid Panel,"<200 Desirable, 200-239 Borderline high, >=240 High"
+2571-8,Triglycerides,Triglyceride,0,150,,,mg/dL,Serum/Plasma,Adult,All,Lipid Panel,"<150 Normal, 150-199 Borderline high, 200-499 High, >=500 Very high"
+3094-0,BUN,Urea nitrogen,7,20,2,100,mg/dL,Serum/Plasma,Adult,All,BMP|CMP,Blood Urea Nitrogen
+2160-0,Creatinine,Creatinine,0.7,1.3,0.4,10,mg/dL,Serum/Plasma,Adult,Male,BMP|CMP,
+2160-0,Creatinine,Creatinine,0.6,1.1,0.4,10,mg/dL,Serum/Plasma,Adult,Female,BMP|CMP,
+33914-3,eGFR,Glomerular filtration rate/1.73 sq M.predicted,90,120,15,,mL/min/1.73m2,Serum/Plasma,Adult,All,Renal Panel,">90 Normal, 60-89 Mild decrease, 30-59 Moderate decrease, 15-29 Severe decrease, <15 Kidney failure"
+2951-2,Sodium,Sodium,136,145,120,160,mEq/L,Serum/Plasma,Adult,All,BMP|CMP,
+2823-3,Potassium,Potassium,3.5,5.0,2.5,6.5,mEq/L,Serum/Plasma,Adult,All,BMP|CMP,
+2075-0,Chloride,Chloride,98,106,80,120,mEq/L,Serum/Plasma,Adult,All,BMP|CMP,
+2028-9,CO2/Bicarbonate,Carbon dioxide,23,29,10,40,mEq/L,Serum/Plasma,Adult,All,BMP|CMP,
+17861-6,Calcium,Calcium,8.6,10.2,6.0,13.0,mg/dL,Serum/Plasma,Adult,All,BMP|CMP,
+1742-6,ALT,Alanine aminotransferase,7,56,,,U/L,Serum/Plasma,Adult,All,CMP|Hepatic Panel,SGPT
+1920-8,AST,Aspartate aminotransferase,10,40,,,U/L,Serum/Plasma,Adult,All,CMP|Hepatic Panel,SGOT
+6768-6,Alkaline Phosphatase,Alkaline phosphatase,44,147,,,U/L,Serum/Plasma,Adult,All,CMP|Hepatic Panel,
+1975-2,Bilirubin Total,Bilirubin.total,0.1,1.2,,15,mg/dL,Serum/Plasma,Adult,All,CMP|Hepatic Panel,
+1751-7,Albumin,Albumin,3.5,5.0,,,g/dL,Serum/Plasma,Adult,All,CMP|Hepatic Panel,
+2885-2,Total Protein,Protein,6.0,8.3,,,g/dL,Serum/Plasma,Adult,All,CMP,
+6690-2,WBC,Leukocytes,4.5,11.0,2.0,30.0,x10^3/uL,Blood,Adult,All,CBC,White Blood Cell count
+789-8,RBC,Erythrocytes,4.5,5.5,3.0,7.0,x10^6/uL,Blood,Adult,Male,CBC,Red Blood Cell count
+789-8,RBC,Erythrocytes,4.0,5.0,3.0,7.0,x10^6/uL,Blood,Adult,Female,CBC,Red Blood Cell count
+718-7,Hemoglobin,Hemoglobin,14.0,18.0,7.0,20.0,g/dL,Blood,Adult,Male,CBC,
+718-7,Hemoglobin,Hemoglobin,12.0,16.0,7.0,20.0,g/dL,Blood,Adult,Female,CBC,
+4544-3,Hematocrit,Hematocrit,40,54,20,65,%,Blood,Adult,Male,CBC,
+4544-3,Hematocrit,Hematocrit,36,48,20,65,%,Blood,Adult,Female,CBC,
+787-2,MCV,Erythrocyte mean corpuscular volume,80,100,,,fL,Blood,Adult,All,CBC,Mean Corpuscular Volume
+785-6,MCH,Erythrocyte mean corpuscular hemoglobin,27,31,,,pg,Blood,Adult,All,CBC,Mean Corpuscular Hemoglobin
+786-4,MCHC,Erythrocyte mean corpuscular hemoglobin concentration,32,36,,,g/dL,Blood,Adult,All,CBC,
+788-0,RDW,Erythrocyte distribution width,11.5,14.5,,,%,Blood,Adult,All,CBC,Red cell Distribution Width
+777-3,Platelets,Platelets,150,400,50,1000,x10^3/uL,Blood,Adult,All,CBC,
+3016-3,TSH,Thyrotropin,0.4,4.0,0.01,10,mIU/L,Serum/Plasma,Adult,All,Thyroid Panel,Thyroid Stimulating Hormone
+3026-2,Free T4,Thyroxine.free,0.8,1.8,,,ng/dL,Serum/Plasma,Adult,All,Thyroid Panel,
+14927-8,Vitamin D,25-Hydroxyvitamin D3,30,100,,,ng/mL,Serum/Plasma,Adult,All,,"<20 Deficient, 20-29 Insufficient, 30-100 Sufficient"
+2502-3,Iron,Iron,60,170,,,mcg/dL,Serum/Plasma,Adult,Male,,
+2502-3,Iron,Iron,50,170,,,mcg/dL,Serum/Plasma,Adult,Female,,
+2498-4,Ferritin,Ferritin,30,400,,,ng/mL,Serum/Plasma,Adult,Male,,
+2498-4,Ferritin,Ferritin,15,150,,,ng/mL,Serum/Plasma,Adult,Female,,
+2276-4,TIBC,Iron binding capacity,250,400,,,mcg/dL,Serum/Plasma,Adult,All,,Total Iron Binding Capacity
+2132-9,Vitamin B12,Cobalamin,200,900,,,pg/mL,Serum/Plasma,Adult,All,,
+2284-8,Folate,Folate,3.0,17.0,,,ng/mL,Serum/Plasma,Adult,All,,
+1759-0,Prealbumin,Prealbumin,18,45,,,mg/dL,Serum/Plasma,Adult,All,,Transthyretin
+14682-9,CRP,C reactive protein,0,3.0,,,mg/L,Serum/Plasma,Adult,All,Inflammation,"<1 Low risk, 1-3 Average risk, >3 High risk"
+30341-2,ESR,Erythrocyte sedimentation rate,0,20,,,mm/hr,Blood,Adult,Male,Inflammation,
+30341-2,ESR,Erythrocyte sedimentation rate,0,30,,,mm/hr,Blood,Adult,Female,Inflammation,
+5902-2,Prothrombin Time,Prothrombin time,11,13.5,,,seconds,Plasma,Adult,All,Coagulation,PT
+6301-6,INR,INR in Platelet poor plasma,0.8,1.2,,,ratio,Plasma,Adult,All,Coagulation,"Therapeutic range 2-3 for A-fib, mechanical valves"
+3173-2,PTT,aPTT,25,35,,,seconds,Plasma,Adult,All,Coagulation,Activated Partial Thromboplastin Time
+5811-5,Specific Gravity,Specific gravity of Urine,1.005,1.030,,,ratio,Urine,Adult,All,Urinalysis,
+5803-2,Urine pH,pH of Urine,4.5,8.0,,,pH,Urine,Adult,All,Urinalysis,
+2349-9,Urine Glucose,Glucose,Negative,Negative,,,qualitative,Urine,Adult,All,Urinalysis,
+20454-5,Urine Protein,Protein,Negative,Negative,,,qualitative,Urine,Adult,All,Urinalysis,
+5770-3,Urine Blood,Blood,Negative,Negative,,,qualitative,Urine,Adult,All,Urinalysis,
+5799-2,Urine Leukocytes,Leukocytes,Negative,Negative,,,qualitative,Urine,Adult,All,Urinalysis,
+5802-4,Urine Nitrite,Nitrite,Negative,Negative,,,qualitative,Urine,Adult,All,Urinalysis,
+2514-8,Uric Acid,Urate,3.5,7.2,,,mg/dL,Serum/Plasma,Adult,Male,,
+2514-8,Uric Acid,Urate,2.5,6.2,,,mg/dL,Serum/Plasma,Adult,Female,,
+1988-5,CK Total,Creatine kinase,30,200,,,U/L,Serum/Plasma,Adult,Male,Cardiac,Creatine Phosphokinase (CPK)
+1988-5,CK Total,Creatine kinase,30,170,,,U/L,Serum/Plasma,Adult,Female,Cardiac,Creatine Phosphokinase (CPK)
+49563-0,Troponin I,Troponin I.cardiac,0,0.04,,0.5,ng/mL,Serum/Plasma,Adult,All,Cardiac,">0.04 elevated, rule out MI"
+30522-7,Troponin T,Troponin T.cardiac,0,0.01,,0.1,ng/mL,Serum/Plasma,Adult,All,Cardiac,">0.01 elevated, rule out MI"
+42176-8,BNP,Natriuretic peptide B,0,100,,,pg/mL,Serum/Plasma,Adult,All,Cardiac,"<100 CHF unlikely, 100-300 possible CHF, >300 likely CHF"
+33762-6,NT-proBNP,Natriuretic peptide.B prohormone N-Terminal,0,125,,,pg/mL,Plasma,Adult,All,Cardiac,Age-adjusted cutoffs; higher in elderly
+30313-1,Magnesium,Magnesium,1.7,2.2,1.0,4.0,mg/dL,Serum/Plasma,Adult,All,,
+2777-1,Phosphorus,Phosphate,2.5,4.5,1.0,8.0,mg/dL,Serum/Plasma,Adult,All,,
+2947-0,Amylase,Amylase,30,110,,,U/L,Serum/Plasma,Adult,All,Pancreatic,
+2532-0,Lipase,Lipase,0,160,,,U/L,Serum/Plasma,Adult,All,Pancreatic,
+1751-7,GGT,Gamma glutamyl transferase,9,48,,,U/L,Serum/Plasma,Adult,Male,Hepatic Panel,
+1751-7,GGT,Gamma glutamyl transferase,9,36,,,U/L,Serum/Plasma,Adult,Female,Hepatic Panel,
+1986-9,LDH,Lactate dehydrogenase,140,280,,,U/L,Serum/Plasma,Adult,All,,
+2532-0,PSA,Prostate specific Ag,0,4.0,,,ng/mL,Serum/Plasma,Adult,Male,Prostate,"Age-adjusted: <2.5 age 40-49, <3.5 age 50-59, <4.5 age 60-69"

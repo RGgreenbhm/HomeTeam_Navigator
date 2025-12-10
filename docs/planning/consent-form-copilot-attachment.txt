@@ -1,0 +1,34 @@
+PATIENT CONSENT FORM STRUCTURE
+==============================
+
+TITLE: Dr. Green's Practice Transition - Patient Consent Form
+
+PAGE 1: VERIFICATION
+- Text: "Dr. Robert Green is transitioning from Southview Medical Group to Home Team Medical Services on January 1, 2026. Please complete this 2-minute form."
+- Question: "Your Reference Token" (short text, required) - Help: "Enter the 16-character code from your text message"
+- Question: "Date of Birth" (date picker, required) - Help: "MM/DD/YYYY"
+
+PAGE 2: RECORDS CONSENT
+- Text: "Your medical records will be stored securely. You can request copies anytime. This consent can be revoked in writing."
+- Question: "I consent to Dr. Robert Green and Home Team Medical Services maintaining my medical records for continuity of care." (choice, required)
+  - Yes, I consent
+  - No, I do not consent
+
+PAGE 3: APCM ELECTIONS
+- Text: "If enrolled in Advanced Primary Care Management (APCM), please make your elections below."
+- Question: "Continue APCM services with Dr. Green at Home Team?" (choice, required)
+  - Yes, continue APCM
+  - No, discontinue APCM
+  - Not Applicable (not enrolled)
+- Question: "Authorize notification to Southview that you're transferring APCM consent? (Prevents duplicate billing after Dec 31, 2025)" (choice, required)
+  - Yes, notify Southview
+  - No, I'll handle separately
+  - Not Applicable
+
+PAGE 4: SIGNATURE
+- Question: "Full Legal Name (as on insurance card)" (short text, required)
+- Question: "Confirm Date of Birth" (date picker, required)
+- Question: "Today's Date" (date picker, required)
+- Question: "I agree that typing my name is my electronic signature, equivalent to handwritten. A copy will be retained and posted to my Southview chart." (checkbox, required)
+
+CONFIRMATION: "Thank you! Questions? Call (205) 955-7605 or email info@hometeammed.com"

@@ -1,0 +1,92 @@
+# Team Manifest: BMAD Methodology Team
+# team-bmad
+
+name: "BMAD Methodology Team"
+short_name: "team-bmad"
+version: "1.0"
+created: "2025-12-03"
+description: "Full BMAD (Build Measure Analyze Decide) agent team for product development"
+
+# Primary agent
+primary_agent:
+  name: "BMAD Master Orchestrator"
+  slash_command: "/agent-bmad-master"
+  icon: "🧙"
+  description: "Universal executor that orchestrates all BMAD agents and tasks"
+
+# Specialized agents available through the Master
+agents:
+  - name: "Analyst"
+    file: "agents/analyst.md"
+    icon: "🔍"
+    specialty: "Research, brainstorming, elicitation"
+
+  - name: "PM (John)"
+    file: "agents/pm.md"
+    icon: "📋"
+    specialty: "PRDs, product strategy"
+
+  - name: "Product Owner"
+    file: "agents/po.md"
+    icon: "✅"
+    specialty: "Validation, document sharding"
+
+  - name: "Architect (Winston)"
+    file: "agents/architect.md"
+    icon: "🏗️"
+    specialty: "System design, architecture"
+
+  - name: "UX Expert"
+    file: "agents/ux-expert.md"
+    icon: "🎨"
+    specialty: "UI/UX, frontend specs"
+
+  - name: "Scrum Master"
+    file: "agents/sm.md"
+    icon: "📊"
+    specialty: "Sprints, story drafting"
+
+  - name: "QA (Quinn)"
+    file: "agents/qa.md"
+    icon: "🧪"
+    specialty: "Testing, quality gates"
+
+  - name: "Developer"
+    file: "agents/dev.md"
+    icon: "💻"
+    specialty: "Implementation"
+
+# Resources included
+resources:
+  tasks: 23
+  templates: 13
+  checklists: 6
+  workflows: 6
+  knowledge_base: 6
+
+# Slash commands to install
+slash_commands:
+  - source: "commands/agent-bmad-master.md"
+    target: ".claude/commands/agent-bmad-master.md"
+
+# Installation target
+install_target: ".bmad-core/"
+
+# Installation instructions
+install_notes: |
+  1. Copy entire team-bmad/ contents to .bmad-core/ in workspace root
+  2. Copy slash command to .claude/commands/agent-bmad-master.md
+  3. Invoke /agent-bmad-master to activate the Master Orchestrator
+
+  The Master can access all other agents through Team Consultation mode.
+
+# Workflows available
+workflows:
+  greenfield:
+    - greenfield-fullstack.yaml
+    - greenfield-service.yaml
+    - greenfield-ui.yaml
+  brownfield:
+    - brownfield-fullstack.yaml
+    - brownfield-service.yaml
+    - brownfield-ui.yaml

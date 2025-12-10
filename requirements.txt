@@ -1,0 +1,61 @@
+# Patient Explorer - Phase 0: Consent Outreach Tool
+# Python dependencies
+
+# Data handling
+pandas>=2.0.0
+openpyxl>=3.1.0  # Excel file support
+
+# API communication
+requests>=2.31.0
+httpx>=0.25.0  # Async HTTP client (for Spruce API)
+
+# SharePoint integration
+Office365-REST-Python-Client>=2.5.0
+
+# Environment and configuration
+python-dotenv>=1.0.0
+
+# Logging and audit
+loguru>=0.7.0
+
+# Data validation
+pydantic>=2.0.0
+
+# CLI interface (optional, for interactive use)
+rich>=13.0.0  # Beautiful terminal output
+typer>=0.9.0  # CLI framework
+
+# Streamlit UI (Phase 1)
+streamlit>=1.29.0
+sqlalchemy>=2.0.0
+plotly>=5.18.0  # Charts for consent dashboard
+pyarrow>=7.0.0  # Note: Install with --only-binary :all: on Windows
+
+# Excel support for older .xls files
+xlrd>=2.0.1
+
+# Azure workspace sync (PHI backup to Azure Blob Storage)
+azure-storage-blob>=12.19.0
+azure-identity>=1.15.0
+
+# Phone number normalization (E.164 format for Spruce matching)
+phonenumbers>=8.13.0
+
+# Fuzzy name matching (MIT licensed, faster than fuzzywuzzy)
+rapidfuzz>=3.0.0
+
+# Desktop packaging (builds Windows executable)
+pyinstaller>=6.0.0
+streamlit-paste-button
+
+# AutoScribe Module - Medical note generation
+# Azure OpenAI for GPT-4.1 summarization (under HIPAA BAA)
+openai>=1.0.0
+
+# Azure Speech Services for audio transcription (under HIPAA BAA)
+azure-cognitiveservices-speech>=1.32.0
+
+# Audio recording and processing
+sounddevice>=0.4.6      # Audio device enumeration and recording
+soundfile>=0.12.1       # Audio file I/O (requires libsndfile)
+pydub>=0.25.1           # Audio segment manipulation

@@ -1,0 +1,45 @@
+# Team Manifest: Workspace Management Team
+# team-ws
+
+name: "Workspace Management Team"
+short_name: "team-ws"
+version: "1.1"
+created: "2025-12-03"
+description: "Agents for workspace hygiene, session management, and document organization"
+
+# Agents in this team
+agents:
+  - name: "Workspace Manager"
+    file: "agent-ws-manager-profile.md"
+    icon: "🗂️"
+    slash_command: "/agent-ws-manager"
+    description: "Session startup, document generation, archive management, settings reconciliation"
+
+# Slash commands to install
+slash_commands:
+  - source: "commands/agent-ws-manager.md"
+    target: ".claude/commands/agent-ws-manager.md"
+  - source: "commands/workspace-brief.md"
+    target: ".claude/commands/workspace-brief.md"
+  - source: "commands/save-chat.md"
+    target: ".claude/commands/save-chat.md"
+  - source: "commands/export-pdf.md"
+    target: ".claude/commands/export-pdf.md"
+  - source: "commands/research-topic.md"
+    target: ".claude/commands/research-topic.md"
+
+# Folder structure this team manages
+managed_folders:
+  - "..Workspace/Focus/"
+  - "..Workspace/History/"
+  - "..Workspace/Settings/"
+
+# Dependencies
+requires:
+  - none  # No external dependencies
+
+# Installation instructions
+install_notes: |
+  1. Copy team-ws/ folder to ..Workspace/Settings/teams/
+  2. Copy slash commands to .claude/commands/
+  3. Invoke /agent-ws-manager to activate

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Transition - Patient Response Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">HT</div>
+                <div class="logo-text">
+                    <span class="clinic-name">Home Team Medical Services</span>
+                    <span class="clinic-subtitle">Dr. Robert Green, MD</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Form -->
+        <main class="main-content">
+            <div class="form-header">
+                <h1>Practice Transition Response Form</h1>
+                <p class="form-intro">
+                    Thank you for being a valued patient. We are reaching out with important information
+                    about Dr. Green's practice transition. Please complete this form to share your
+                    contact preferences and any questions you may have.
+                </p>
+            </div>
+
+            <form id="consent-form" class="form-container">
+                <!-- Hidden token field -->
+                <input type="hidden" id="token" name="token" value="">
+
+                <!-- Section 1: Patient Identification -->
+                <section class="form-section">
+                    <h2>1. Patient Information</h2>
+                    <p class="section-note">For verification purposes only</p>
+
+                    <div class="form-group">
+                        <label for="full_name" class="required">Full Name</label>
+                        <input type="text" id="full_name" name="full_name"
+                               placeholder="As it appears in our records" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date_of_birth" class="required">Date of Birth</label>
+                        <input type="date" id="date_of_birth" name="date_of_birth" required>
+                    </div>
+                </section>
+
+                <!-- Section 2: Contact Preferences -->
+                <section class="form-section">
+                    <h2>2. Contact Preferences</h2>
+
+                    <div class="form-group">
+                        <label class="required">Preferred Contact Method</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="contact_method" value="phone" required>
+                                <span>Phone call</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="contact_method" value="sms">
+                                <span>Text message (SMS)</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="contact_method" value="email">
+                                <span>Email</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="contact_method" value="portal">
+                                <span>Secure patient portal</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="contact_method" value="mail">
+                                <span>Mail</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required">Contact Consent</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="contact_consent" value="yes" required>
+                                <span>Yes, I consent to receive communications via my preferred method above</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="contact_consent" value="mail_only">
+                                <span>No, please contact me by mail only</span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Provider Preference -->
+                <section class="form-section">
+                    <h2>3. Your Care Preference</h2>
+
+                    <div class="form-group">
+                        <label>Provider Preference</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="provider_preference" value="continue">
+                                <span>I would like to continue care with Dr. Green at the new location</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="provider_preference" value="transfer">
+                                <span>I would like information about transferring my records to another provider</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="provider_preference" value="undecided">
+                                <span>I need more information before deciding</span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4: APCM (Optional) -->
+                <section class="form-section">
+                    <h2>4. APCM Enrollment Status</h2>
+                    <p class="section-note">If you are enrolled in Advanced Primary Care Management</p>
+
+                    <div class="form-group">
+                        <label>APCM Acknowledgment</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="apcm_status" value="continue">
+                                <span>I understand my APCM enrollment status and wish to continue with Home Team</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="apcm_status" value="questions">
+                                <span>I have questions about APCM billing</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="apcm_status" value="na" checked>
+                                <span>Not applicable / I am not enrolled in APCM</span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 5: Questions/Concerns -->
+                <section class="form-section">
+                    <h2>5. Questions or Concerns</h2>
+
+                    <div class="form-group">
+                        <label for="questions">Please share any questions or concerns about the practice transition</label>
+                        <textarea id="questions" name="questions" rows="4"
+                                  placeholder="Type your questions here... (optional)"></textarea>
+                    </div>
+                </section>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" id="submit-btn" class="btn-primary">
+                        <span class="btn-text">Submit Response</span>
+                        <span class="btn-loading" style="display: none;">Submitting...</span>
+                    </button>
+                </div>
+
+                <!-- Error/Success Messages -->
+                <div id="form-message" class="form-message" style="display: none;"></div>
+            </form>
+
+            <!-- Success State (hidden initially) -->
+            <div id="success-state" class="success-container" style="display: none;">
+                <div class="success-icon">&#10003;</div>
+                <h2>Thank You!</h2>
+                <p>Your response has been received. Our team will review your information and reach out if needed.</p>
+                <p class="contact-info">
+                    If you have immediate questions, please call our office at:<br>
+                    <a href="tel:+12059557605" class="phone-link">(205) 955-7605</a>
+                </p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Home Team Medical Services | Dr. Robert Green, MD</p>
+            <p class="privacy-notice">
+                This form is secure. Your information is protected and will only be used
+                for the purpose of facilitating the practice transition.
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
